@@ -8,4 +8,6 @@ import (
 
 func main() {
 	fmt.Println(projects.HelloWorld())
+
+	fmt.Println(projects.test())
 }
