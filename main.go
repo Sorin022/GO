@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-
-	projects "github.com/Sorin022/GO/Projects"
 )
 
-func main() {
-	fmt.Println(projects.HelloWorld())
+/* experiment with the go language use the package as well as useing the main fucntion to make things. See how to do things in classes, hash table, if, for, while, and do*/
 
-	fmt.Println(projects.test())
+func main() {
+	fmt.Println("Hello World!")
+
 }
