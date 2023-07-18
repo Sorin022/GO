@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fmt.Println(projects.one())
+	fmt.Println(projects.test())
 }

@@ -1,5 +1,5 @@
 package projects
 
-func one() string {
+func test() string {
 	return "GO :)"
 }
