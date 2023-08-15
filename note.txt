@@ -1,0 +1,84 @@
+they have arrays as well as slice. (lol the name)
+the slice is a special type of array that is like array does all the same stuff but the length of the array will grow and shrink based on how you want
+just like python (hype)
+
+you can take an array and make a slice:
+arr1 := [6]int{10, 11, 12, 13, 14,15}
+myslice := arr1[0:6]
+
+the 0 is the start point in the array, if you want to copy the whole thing it would not be five. five coming from the fact that the og array is size 6 but base zero so 0 - 5
+you would put in the full amount of the array so in this case 6.
+to copy whole array enter in 0 - max of array.
+
+another way to make a slice:
+slice_name := make([]type, length, capacity)
+
+appending:
+myslice1 = append(slice_name, iteam, iteam)
+
+The copy() function takes in two slices dest and src, and copies data from src to dest. It returns the number of elements copied.
+
+classes are not called classes the are stucts: like C++,
+
+type struct_name struct {
+  member1 datatype;
+  member2 datatype;
+  member3 datatype;
+  ...
+}
+
+to call in main you would say
+var name struct_name
+
+then add all the dataypes that are in the struct to that name:
+
+name.number1 = 
+and so on
+
+Go also has maps:
+
+Maps are used to store data values in key:value pairs.
+
+Each element in a map is a key:value pair.
+
+A map is an unordered and changeable collection that does not allow duplicates.
+
+The length of a map is the number of its elements. You can find it using the len() function.
+
+The default value of a map is nil.
+
+Maps hold references to an underlying hash table.
+
+how to create a map:
+var a = map[KeyType]ValueType{key1:value1, key2:value2,...}
+b := map[KeyType]ValueType{key1:value1, key2:value2,...}
+
+empty map:
+var a map[KeyType]ValueType
+
+key stuff to grab the data:
+value = map_name[key]
+
+delete stuff:
+delete(map_name, key)
+
+checking stuff:
+val, ok :=map_name[key]
+If you only want to check the existence of a certain key, you can use the blank identifier (_) in place of val.
+
+iterating:
+package main
+import ("fmt")
+
+func main() {
+  a := map[string]int{"one": 1, "two": 2, "three": 3, "four": 4}
+
+  for k, v := range a {
+    fmt.Printf("%v : %v, ", k, v)
+  }
+}
+Result:
+
+two : 2, three : 3, four : 4, one : 1,
+
+Note: The order of the map elements defined in the code is different from the way that they are stored. The data are stored in a way to have efficient data retrieval from the map.
