@@ -3,12 +3,9 @@ package main
 import (
 	"fmt"
 
-	"test.com/Go/mascot"
-	"test.com/Go/numbers"
+	"test.com/Go/palan"
 )
 
 func main() {
-	fmt.Println(mascot.BestMascot())
-
-	fmt.Println(numbers.AddTwoNums())
+	fmt.Println(palan.CheckPalan())
 }
