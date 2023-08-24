@@ -4,6 +4,38 @@ import (
 	"fmt"
 )
 
+func checkFoward(startArray []string, checkWord string) string {
+	var place int = 0
+	var size int = len(checkWord)
+
+	checkLetter := startArray[place]
+
+	if place < size {
+		place++
+	} else {
+
+	}
+
+	return checkLetter
+
+}
+
+func checkBackword(endArray []string, checkWord string) string {
+	var size int = len(checkWord)
+	var place int = size
+
+	checkLetter := endArray[place]
+
+	if place > 0 {
+		place--
+	} else {
+
+	}
+
+	return checkLetter
+
+}
+
 func CheckPalan() int {
 	var word string = "hello"
 	count := 0
@@ -25,20 +57,20 @@ func CheckPalan() int {
 		arr2[k] = string(word[k])
 	}
 
-	//iterating foward
+	/*//iterating foward
 	for j := 0; j < size; j++ {
 		start := arr1[j]
 		fmt.Println(start)
 	}
 
-	//iterating backwards
+	//iterate backwords
 	for l := len(arr2) - 1; l >= 0; l-- {
 		end := arr2[l]
 		fmt.Println(end)
-	}
+	}*/
 
 	//next
-	/* combing the both and then comparing front and back end to make sure they all match, if not not palandrome and then break out*/
+	/* Test out the fucntions and see if they work to what you think they will do*/
 
 	return count
 }
