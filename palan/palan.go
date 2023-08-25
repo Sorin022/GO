@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+//gets a stack overflow error this is becasue when the function is called it set the place valiable ot zero of the lenght of the word
+//then checks the if and then recusivly asks for the function again. But this then resets all the value again back to defulat causeing
+//there to be a infinite loop
+
 func checkFoward(startArray []string, checkWord string) string {
 	var place int = 0
 	var size int = len(checkWord)
@@ -12,8 +16,9 @@ func checkFoward(startArray []string, checkWord string) string {
 
 	if place < size {
 		place++
+		checkFoward(startArray, checkWord)
 	} else {
-
+		return "0"
 	}
 
 	return checkLetter
@@ -28,8 +33,9 @@ func checkBackword(endArray []string, checkWord string) string {
 
 	if place > 0 {
 		place--
+		checkBackword(endArray, checkWord)
 	} else {
-
+		return "0"
 	}
 
 	return checkLetter
@@ -55,6 +61,11 @@ func CheckPalan() int {
 
 	for k := 0; k < size; k++ {
 		arr2[k] = string(word[k])
+	}
+
+	for q := 0; q < size; q++ {
+		fmt.Println(checkFoward(arr1, word))
+		fmt.Println(checkBackword(arr2, word))
 	}
 
 	/*//iterating foward
